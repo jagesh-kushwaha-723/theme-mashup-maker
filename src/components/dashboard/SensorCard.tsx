@@ -43,7 +43,7 @@ export const SensorCard = ({ sensor }: SensorCardProps) => {
       </CardHeader>
       <CardContent className="space-y-4">
         {hasData ? (
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 gap-6">
             <div className="text-center">
               <div className="text-3xl font-bold text-foreground group-hover:text-primary transition-smooth">
                 {sensor.temperature.toFixed(1)}
@@ -53,12 +53,6 @@ export const SensorCard = ({ sensor }: SensorCardProps) => {
             <div className="text-center">
               <div className="text-3xl font-bold text-foreground group-hover:text-primary transition-smooth">
                 {sensor.humidity.toFixed(1)}
-              </div>
-              <div className="text-sm text-muted-foreground">%</div>
-            </div>
-            <div className="text-center">
-              <div className="text-lg font-medium text-muted-foreground">
-                {((sensor.temperature + sensor.humidity) / 2).toFixed(1)}
               </div>
               <div className="text-sm text-muted-foreground">%</div>
             </div>
