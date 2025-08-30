@@ -32,7 +32,7 @@ export const SensorCard = ({ sensor }: SensorCardProps) => {
   const hasData = sensor.temperature > 0;
 
   return (
-    <Card className="bg-gradient-card border-border shadow-elegant hover:shadow-glow transition-smooth group">
+    <Card className="bg-gradient-card border-border shadow-elegant hover:shadow-glow-strong hover:shadow-border-glow transition-smooth group relative overflow-hidden hover:border-primary/50">
       <CardHeader className="pb-3">
         <div className="flex items-center justify-between">
           <CardTitle className="text-lg font-semibold text-primary">{sensor.id}</CardTitle>
@@ -67,9 +67,9 @@ export const SensorCard = ({ sensor }: SensorCardProps) => {
         <div className="flex items-center justify-between pt-2 border-t border-border">
           <div className="text-xs text-muted-foreground">{sensor.lastUpdate}</div>
           <Button 
-            variant="ghost" 
+            variant="outline" 
             size="sm" 
-            className="text-primary hover:text-primary-foreground hover:bg-primary transition-smooth"
+            className="bg-primary/10 border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground hover:border-primary hover:shadow-border-glow transition-smooth font-medium px-4 py-2"
           >
             Details
           </Button>
